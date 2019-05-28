@@ -4,22 +4,22 @@ import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay'
 import NumberButton from './components/ButtonComponents/NumberButton';
 import ActionButton from './components/ButtonComponents/ActionButton';
 
-const arr1 = [{text: 'clear', buttonClass: 'wide-button'},
-              {text: '÷', buttonClass: 'function-button'}, 
-              {text: '7', buttonClass: 'number-button'},
-              {text: '8', buttonClass: 'number-button'},
-              {text: '9', buttonClass: 'number-button'},
-              {text: 'X', buttonClass: 'function-button'},
-              {text: '4', buttonClass: 'number-button'},
-              {text: '5', buttonClass: 'number-button'},
-              {text: '6', buttonClass: 'number-button'},
-              {text: '-', buttonClass: 'function-button'},
-              {text: '1', buttonClass: 'number-button'},
-              {text: '2', buttonClass: 'number-button'},
-              {text: '3', buttonClass: 'number-button'},
-              {text: '+', buttonClass: 'number-button'},
-              {text: '0', buttonClass: 'wide-button'},
-              {text: '=', buttonClass: 'function-button'},];
+// const arr1 = [{text: 'clear', buttonClass: 'wide-button'},
+//               {text: '÷', buttonClass: 'function-button'}, 
+//               {text: '7', buttonClass: 'number-button'},
+//               {text: '8', buttonClass: 'number-button'},
+//               {text: '9', buttonClass: 'number-button'},
+//               {text: 'X', buttonClass: 'function-button'},
+//               {text: '4', buttonClass: 'number-button'},
+//               {text: '5', buttonClass: 'number-button'},
+//               {text: '6', buttonClass: 'number-button'},
+//               {text: '-', buttonClass: 'function-button'},
+//               {text: '1', buttonClass: 'number-button'},
+//               {text: '2', buttonClass: 'number-button'},
+//               {text: '3', buttonClass: 'number-button'},
+//               {text: '+', buttonClass: 'number-button'},
+//               {text: '0', buttonClass: 'wide-button'},
+//               {text: '=', buttonClass: 'function-button'},];
 
 
 class App extends React.Component{
@@ -42,7 +42,7 @@ class App extends React.Component{
       case "-":
         return x - y;
       case "÷":
-        return x / y;
+        return Math.round(100 * (x / y)) / 100;
       case "X":
         return x * y;
     }
