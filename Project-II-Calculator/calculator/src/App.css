@@ -1,0 +1,9 @@
+.calculator-display{
+    width: 500px;
+    height: 700px;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: dodgerblue;
+    display: flex;
+    flex-flow: row wrap;
+}
