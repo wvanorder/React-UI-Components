@@ -53,7 +53,8 @@ console.log(event.target.textContent);
 if(event.target.textContent === 'clear') {
   this.setState({keyPress: [], calcDisplay : 0,
   num1: null,
-num2: null});
+num2: null,
+function: null});
 
 } else if(event.target.textContent === '+') {
   this.setState({num1 : this.state.calcDisplay,
