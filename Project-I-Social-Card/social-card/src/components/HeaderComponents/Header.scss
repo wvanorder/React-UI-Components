@@ -1,0 +1,44 @@
+/* All styles for your header Components live here */
+
+.header-container {
+    display: flex;
+    flex-flow: row wrap; 
+    height: 0px;
+    .logo-image{
+        height: 50px;
+        width: 50px;
+        display: inline-block;
+    }
+
+    .header-title {
+        width: 70%;
+        height: 40px;
+        display: flex; 
+        flex-flow: row nowrap;
+        align-items: baseline;
+        h1{
+            display: inline-block;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        h2{
+            display: inline-block;
+            font-size: 16px;
+            margin-right: 20px;
+            color: gray;
+        }
+        h4{
+            display: inline-block;
+            color: gray;
+        }
+
+       
+    }
+    .header-content {
+        
+         margin-left: 50px;
+         padding-top: 10px;
+        
+    }
+}
+
