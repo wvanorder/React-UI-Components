@@ -29,8 +29,22 @@ class App extends React.Component{
       calcDisplay: 0,
       num1: null,
       num2: null,
+      function: null,
       keyPress: [],
 
+    }
+  }
+
+  doMath = (x,y) => {
+    switch(this.state.function) {
+      case "+":
+        return x + y;
+      case "-":
+        return x - y;
+      case "÷":
+        return x / y;
+      case "X":
+        return x * y;
     }
   }
 
@@ -44,12 +58,31 @@ num2: null});
 } else if(event.target.textContent === '+') {
   this.setState({num1 : this.state.calcDisplay,
   calcDisplay: 0,
-keyPress: []});
+keyPress: [],
+function: '+'});
+
+} else if(event.target.textContent === '-') {
+  this.setState({num1 : this.state.calcDisplay,
+  calcDisplay: 0,
+keyPress: [],
+function: '-'});
+
+} else if(event.target.textContent === 'X') {
+  this.setState({num1 : this.state.calcDisplay,
+  calcDisplay: 0,
+keyPress: [],
+function: 'X'});
+
+} else if(event.target.textContent === '÷') {
+  this.setState({num1 : this.state.calcDisplay,
+  calcDisplay: 0,
+keyPress: [],
+function: '÷'});
 
 } else if(event.target.textContent === '=') {
   this.setState({num2: this.state.calcDisplay,
     keyPress: [],
-  calcDisplay: parseInt(this.state.num1) + parseInt(this.state.num2)});
+  calcDisplay: this.doMath(parseInt(this.state.num1), parseInt(this.state.num2))});
 
 } else { if(this.state.num1 === null) {
   this.setState({keyPress: [...this.state.keyPress, event.target.textContent],
